@@ -65,7 +65,16 @@ class _PerguntaAppState extends State<PerguntaApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.red,
+          foregroundColor: Colors.black,
           title: Text('Perguntas'),
+          actions: <Widget>[
+            IconButton(
+              onPressed: _reiniciarQuestionario,
+              icon: const Icon(Icons.restore),
+              tooltip: 'Reinicia o Questionario!',
+            )
+          ],
         ),
         body: temPerguntaelecionada
             ? Questionario(
